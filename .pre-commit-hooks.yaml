@@ -1,0 +1,53 @@
+- id: cargo-fmt
+  name: cargo fmt
+  description: Format Rust code according to style guidelines.
+  language: rust
+  files: \.rs$
+  pass_filenames: false
+  entry: cargo fmt
+  args: ["--all"]
+
+- id: cargo-clippy
+  name: cargo clippy
+  description: Catch common mistakes and improve Rust code with a collection of lints.
+  language: rust
+  files: (Cargo.(toml|lock)|\.rs$)
+  pass_filenames: false
+  entry: cargo clippy
+  args: ["--workspace"]
+
+- id: cargo-check
+  name: cargo check
+  description: Check Rust code for compilation errors.
+  language: rust
+  files: (Cargo.(toml|lock)|\.rs$)
+  pass_filenames: false
+  entry: cargo check
+  args: ["--workspace"]
+
+- id: cargo-test
+  name: cargo test
+  description: Execute unit and integration tests of Rust code.
+  language: rust
+  files: (Cargo.(toml|lock)|\.rs$)
+  pass_filenames: false
+  entry: cargo test
+  args: ["--workspace"]
+
+- id: cargo-test-doc
+  name: cargo test --doc
+  description: Execute documentation tests of Rust code.
+  language: rust
+  files: (Cargo.(toml|lock)|\.rs$)
+  pass_filenames: false
+  entry: cargo test --doc
+  args: ["--workspace"]
+
+- id: cargo-doc
+  name: cargo doc
+  description: Build the documentation of Rust code.
+  language: rust
+  files: (Cargo.(toml|lock)|\.rs$|^README\.)
+  pass_filenames: false
+  entry: cargo doc
+  args: ["--workspace"]
