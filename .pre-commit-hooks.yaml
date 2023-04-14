@@ -7,6 +7,15 @@
   entry: cargo fmt
   args: ["--all"]
 
+- id: cargo-update
+  name: cargo update
+  description: Update dependencies in the Cargo.lock file.
+  language: rust
+  files: (Cargo.(toml|lock))
+  pass_filenames: false
+  entry: cargo update
+  args: ["--workspace"]
+
 - id: cargo-clippy
   name: cargo clippy
   description: Catch common mistakes and improve Rust code with a collection of lints.

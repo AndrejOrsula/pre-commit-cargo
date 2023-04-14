@@ -10,6 +10,7 @@ repos:
     rev: 0.1.0
     hooks:
       - id: cargo-fmt
+      - id: cargo-update
       - id: cargo-clippy
         args: ["--all-targets", "--all-features"]
       - id: cargo-check
