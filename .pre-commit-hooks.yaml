@@ -60,3 +60,20 @@
   pass_filenames: false
   entry: cargo doc
   args: ["--workspace"]
+
+- id: cargo-miri-test
+  name: cargo miri test
+  description: Detect undefined behavior in Rust tests (requires nightly toolchain).
+  language: rust
+  files: (Cargo.(toml|lock)|\.rs$|^README\.)
+  pass_filenames: false
+  entry: cargo +nightly miri test
+  args: ["--workspace"]
+
+- id: cargo-miri-run
+  name: cargo miri run
+  description: Detect undefined behavior in Rust binary (requires nightly toolchain).
+  language: rust
+  files: (Cargo.(toml|lock)|\.rs$|^README\.)
+  pass_filenames: false
+  entry: cargo +nightly miri run

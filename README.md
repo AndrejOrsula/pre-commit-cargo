@@ -21,4 +21,6 @@ repos:
         args: ["--all-features"]
       - id: cargo-doc
         args: ["--no-deps", "--document-private-items"]
+      - id: cargo-miri-test
+      - id: cargo-miri-run
 ```
