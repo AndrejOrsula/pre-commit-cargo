@@ -7,7 +7,7 @@ A set of pre-commit hooks using [`cargo`](https://doc.rust-lang.org/cargo/) for 
 ```yaml
 repos:
   - repo: https://github.com/AndrejOrsula/pre-commit-cargo
-    rev: 0.2.0
+    rev: 0.3.0
     hooks:
       - id: cargo-fmt
       - id: cargo-update
@@ -23,4 +23,5 @@ repos:
         args: ["--no-deps", "--document-private-items"]
       - id: cargo-miri-test
       - id: cargo-miri-run
+      - id: cargo-deny-check
 ```

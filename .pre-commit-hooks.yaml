@@ -77,3 +77,11 @@
   files: (Cargo.(toml|lock)|\.rs$|^README\.)
   pass_filenames: false
   entry: cargo +nightly miri run
+
+- id: cargo-deny-check
+  name: cargo deny check
+  description: Lint Rust depencencies.
+  language: rust
+  files: (Cargo.(toml|lock)|\.rs$|^README\.)
+  pass_filenames: false
+  entry: cargo deny check
