@@ -21,6 +21,8 @@ repos:
         args: ["--all-features"]
       - id: cargo-doc
         args: ["--no-deps", "--document-private-items"]
+      - id: cargo-fix
+        args: ["--allow-dirty", "--allow-staged"]
       - id: cargo-miri-test
       - id: cargo-miri-run
       - id: cargo-deny-check
