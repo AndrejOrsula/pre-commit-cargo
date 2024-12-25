@@ -85,3 +85,12 @@
   files: (Cargo.(toml|lock)|\.rs$|^README\.)
   pass_filenames: false
   entry: cargo deny check
+
+- id: cargo-fix
+  name: cargo fix
+  description: Apply Rust code fixes
+  language: rust
+  files: \.rs$
+  pass_filenames: false
+  entry: cargo fix
+  args: ["--workspace", "--allow-dirty", "--allow-staged"]
