@@ -13,7 +13,7 @@
   language: rust
   files: (Cargo.(toml|lock))
   pass_filenames: false
-  entry: cargo update
+  entry: cargo-update-shim
   args: ["--workspace"]
 
 - id: cargo-clippy

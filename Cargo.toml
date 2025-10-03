@@ -6,5 +6,5 @@ repository = "https://github.com/AndrejOrsula/pre-commit-cargo"
 edition = "2024"
 
 [[bin]]
-name = "dummy"
-path = "src/dummy.rs"
+name = "cargo-update-shim"
+path = "src/cargo_update_shim.rs"
